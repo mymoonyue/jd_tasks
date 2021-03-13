@@ -17,11 +17,18 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync rule_script
+      - name: sync jd_scripts
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/blackmatrix7/ios_rule_script.git"
+          source_repo: "https://github.com/DoveBoy/jd_scripts-gitee.git"
           source_branch: "master"
-          destination_branch: "main"
+          destination_branch: "master"
           github_token: ${{ secrets.PAT }}
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 0
