@@ -6,7 +6,7 @@ on:
   watch:
     types: started
   push:
-    branches: [ master ]
+    branches: [ sync ]
   repository_dispatch:
     types: sync-lxk0301/jd_scripts
 jobs:
