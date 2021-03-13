@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
   repository_dispatch:
-    types: sync-repo
+    types: sync-lxk0301/jd_scripts
 jobs:
   repo-sync:
     env:
