@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    if: ${{ github.event.repository.owner.id == github.event.sender.id && github.repository == 'DoveBoy/jd_scripts-gitee' }}
+    if: ${{ github.event.repository.owner.id == github.event.sender.id && github.repository == 'mymoonyue/jd_tasks' }}
     timeout-minutes: 2
 
     steps:
