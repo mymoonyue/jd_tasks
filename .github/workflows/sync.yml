@@ -1,14 +1,11 @@
 name: sync-lxk0301/jd_scripts
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '* * * * *'
   workflow_dispatch:
   watch:
     types: started
-  push:
-    branches: [ sync ]
-  repository_dispatch:
-    types: sync-lxk0301/jd_scripts
+ 
 jobs:
   repo-sync:
     env:
